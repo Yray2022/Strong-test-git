@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PostsServes from "../API/PostsServis";
+import "../App.css"
 
 
 const AboutComments = () => {
@@ -18,7 +19,7 @@ const AboutComments = () => {
     },[])
 
     return (
-        <div>
+        <div className="idParems">
             <h1>
                 Страница поста c ID = {params.id}
             </h1>

@@ -74,6 +74,14 @@
   display: flex;
 }
 
+.idParems {
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 150px;
+  border: 2px dashed teal;
+  border-radius: 15px;
+  width: 700px;
+}
 
 .page {
   margin-left: 10px;

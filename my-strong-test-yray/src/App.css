@@ -38,6 +38,7 @@
 }
 
 .post {
+  position: relative;
   align-items: center;
   display: inline-table;
   margin-top: 30px;
@@ -51,8 +52,13 @@
 
 
 .hederPost {
+  margin-top: 15px;
   text-align: center;
-  margin-top: 10px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 10px;
 }
 
 .page__wrapper {

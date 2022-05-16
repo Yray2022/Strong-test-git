@@ -18,7 +18,6 @@ function Postss() {
   const [posts, setPosts] = useState([])
   const [title, setTitle] = useState('')
   const [body, setbody] = useState('')
-  const [visible, setVisible] = useState(false)
   const [serchQuery, setSerchQuery] = useState('')
   const [getQueru, setGetQueru] = useState('')
   const [totalPages, setTotalPages] = useState(0)
@@ -57,14 +56,6 @@ function Postss() {
     setPage(page)
   }
 
-  const openModal = (e) => {
-    e.preventDefault()
-    setVisible(true)
-  }
-
-  const closeModal = () => {
-    setVisible(false)
-  }
 
   const addPost = (e) => {
     e.preventDefault()
@@ -85,16 +76,7 @@ function Postss() {
 
   return (
     <div className="App">
-      <MyModal visible={visible} setVisible={setVisible}>
-        <MyInput 
-        value={getQueru}
-        onChange={e => setGetQueru(e.target.value)}
-        placeholder="Поиск..."/>
-        <MyButton onClick={closeModal}>
-          Закрить
-        </MyButton>
-      </MyModal>
-      <PostForm title={title} body={body} setTitle={setTitle} setbody={setbody} addPost={addPost} openModal={openModal}/>
+      <PostForm  getQueru={getQueru} setGetQueru={setGetQueru} title={title} body={body} setTitle={setTitle} setbody={setbody} addPost={addPost}/>
       <h1 className='pageValue'>Страниса {page}</h1>
         {getSortedPostsQuery.map((post, index) => 
         <PostList key={post.id} post={post} number={index + 1} removeButton={removeButton}/>
